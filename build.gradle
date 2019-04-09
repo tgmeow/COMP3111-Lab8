@@ -1,0 +1,22 @@
+plugins {
+	id "com.diffplug.gradle.spotless" version "3.21.1"
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply from: "${rootProject.projectDir}/config/spotless.gradle"
+
+group 'lab8'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+mainClassName = 'comp3111.lab8.Lab8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	testCompile group: 'junit', name: 'junit', version: '4.12'
+}

@@ -1,0 +1,18 @@
+spotless {
+	format 'misc', {
+		target '**/*.gradle', '**/*.md', '**/.gitignore'
+
+		trimTrailingWhitespace()
+		indentWithTabs() // or spaces. Takes an integer argument if you don't like 4
+		endWithNewline()
+	}
+	java {
+		googleJavaFormat()
+//        licenseHeaderFile 'spotless.license.java'		// License header file
+		importOrder 'java', 'javafx', 'com', 'org', 'comp3111', ''
+		removeUnusedImports() // removes any unused imports
+		trimTrailingWhitespace()
+		indentWithSpaces(2)
+		endWithNewline()
+	}
+}
